@@ -72,7 +72,7 @@ function App() {
         
         <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
           <FilterChip
-            label="Filter default"
+            label="Parking slot"
             badgeCount={7}
             options={mockData}
             onSelectionChange={(selectedOptions) => {
