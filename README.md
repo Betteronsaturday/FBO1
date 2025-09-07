@@ -1,7 +1,4 @@
-# FBO1
+# FBO One Components
 
-This repository was initialized by Builder.io.
-
-## Getting Started
-
-Welcome to your new repository! You can now start building your project.
+**Custom filter-chip for FBO One**
+A responsive filter chip component with dropdown menu, search functionality, and multi-select capabilities.
