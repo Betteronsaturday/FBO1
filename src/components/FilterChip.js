@@ -118,6 +118,30 @@ const FilterChip = ({
               {label}
             </Typography>
             <InfoIcon sx={{ fontSize: 24, color: 'rgb(95,95,95)', ml: '8px' }} />
+
+            {selectedCount > 0 && (
+              <Box
+                sx={{
+                  ml: '8px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  bgcolor: 'primary.main',
+                  color: 'primary.contrastText',
+                  fontSize: '12px',
+                  fontWeight: 500,
+                  lineHeight: '20px',
+                  minWidth: '20px',
+                  height: '20px',
+                  borderRadius: '100px',
+                  px: '6.5px',
+                }}
+                aria-hidden
+              >
+                {selectedCount}
+              </Box>
+            )}
+
             <Box sx={{ ml: 'auto', display: 'flex', alignItems: 'center' }}>
               <CloseFilled sx={{ fontSize: 24, color: 'rgb(95,95,95)' }} />
             </Box>
