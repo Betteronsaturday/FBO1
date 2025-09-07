@@ -190,7 +190,7 @@ const FilterChip = ({
             <TextField
               fullWidth
               size="small"
-              label="Search value"
+              label="Custom Filter chip for FBO One"
               value={searchValue}
               onChange={handleSearchChange}
               variant="outlined"
