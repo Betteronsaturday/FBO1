@@ -1,6 +1,7 @@
-# Vibe coding on FBO One [part1]
+# Vibe coding on FBO One
 
-**Creating and testing different new FBO One components**
+**Episode 1
+Creating and testing different new FBO One components**
 
 Vibe coding here, using a variety of tools, from Figma to Cursor, from Builder.io to AI (cluade).
 
