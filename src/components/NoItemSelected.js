@@ -6,13 +6,15 @@ const NoItemSelected = () => {
     <Box
       sx={{
         display: 'flex',
-        padding: '8px 16px',
-        alignItems: 'flex-start',
         alignContent: 'flex-start',
-        gap: '8px',
+        alignItems: 'flex-start',
         alignSelf: 'stretch',
         flexWrap: 'wrap',
+        fontWeight: '400',
+        gap: '8px',
         position: 'relative',
+        marginBottom: '8px',
+        padding: '8px 16px',
       }}
     >
       <Box
