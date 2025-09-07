@@ -19,6 +19,7 @@ import {
   Close as CloseIcon,
   Clear as ClearIcon,
 } from '@mui/icons-material';
+import NoItemSelected from './NoItemSelected';
 
 const CloseFilled = (props) => <CloseIcon {...props} />;
 
