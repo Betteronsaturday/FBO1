@@ -122,7 +122,6 @@ const FilterChip = ({
             {selectedCount > 0 && (
               <Box
                 sx={{
-                  ml: '8px',
                   display: 'inline-flex',
                   alignItems: 'center',
                   justifyContent: 'center',
