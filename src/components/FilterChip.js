@@ -193,7 +193,7 @@ const FilterChip = ({
               label="Search value"
               value={searchValue}
               onChange={handleSearchChange}
-              variant="outlined"
+              variant="filled"
               InputProps={{
                 endAdornment: searchValue && (
                   <InputAdornment position="end">
@@ -209,11 +209,9 @@ const FilterChip = ({
               }}
               sx={{
                 mb: 2,
-                '& .MuiOutlinedInput-root': {
+                '& .MuiFilledInput-root': {
                   borderRadius: '4px',
-                  '& fieldset': {
-                    borderColor: '#DDE7EE',
-                  },
+                  backgroundColor: 'grey.100',
                 },
                 '& .MuiInputLabel-root': {
                   fontSize: '12px',
