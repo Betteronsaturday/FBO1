@@ -21,7 +21,6 @@ const theme = createTheme({
       300: '#E0E0E0',
     },
     background: {
-      default: '#FAFAFA',
       paper: '#FFF',
     },
     divider: 'rgba(0, 0, 0, 0.12)',
