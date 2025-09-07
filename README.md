@@ -8,3 +8,6 @@ I wanted to design and recreate different UI custom components for the FBO One u
 All of them based on React and MUI v6.
 
 The first of them it will be a complex custom filter chip for multiselection.
+
+
+<img width="440" height="754" alt="_FilterChip_" src="https://github.com/user-attachments/assets/aff859da-6abb-4cf9-a026-30fd9e1da36b" />
