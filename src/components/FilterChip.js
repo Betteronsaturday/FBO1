@@ -217,6 +217,15 @@ const FilterChip = ({
                   transitionProperty: 'background-color',
                   transitionTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
                 },
+                '&:hover .MuiFilledInput-root': {
+                  backgroundColor: 'rgba(255,255,255,1)'
+                },
+                '& .MuiFilledInput-root.Mui-focused': {
+                  backgroundColor: 'rgba(255,255,255,1)'
+                },
+                '& .MuiFilledInput-root.Mui-focused:hover': {
+                  backgroundColor: 'rgba(255,255,255,1)'
+                },
                 '& .MuiInputLabel-root': {
                   fontSize: '14px',
                   color: 'rgba(158,158,158,1)',
