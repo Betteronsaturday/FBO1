@@ -277,7 +277,7 @@ const FilterChip = ({
                 </Box>
 
                 {/* Selected Items Chips */}
-                <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', mb: 1 }}>
+                <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', marginBottom: '16px' }}>
                   {selectedOptions.map((option) => (
                     <Chip
                       key={option.id}
