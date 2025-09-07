@@ -172,13 +172,8 @@ const FilterChip = ({
           vertical: 'top',
           horizontal: 'left',
         }}
-        sx={{
-          '& .MuiPopover-paper': {
-            marginTop: '4px',
-            width: '420px',
-            maxWidth: '90vw',
-          },
-        }}
+        ModalProps={{ hideBackdrop: true, disableEnforceFocus: true, disableAutoFocus: true }}
+        PaperProps={{ sx: { marginTop: '4px', width: '420px', maxWidth: '90vw' } }}
       >
         <Paper
           elevation={8}
