@@ -257,18 +257,7 @@ const FilterChip = ({
 
             {/* No Results */}
             {hasNoResults && (
-              <Typography
-                variant="body2"
-                sx={{
-                  color: 'text.secondary',
-                  fontSize: '13px',
-                  lineHeight: '18px',
-                  letterSpacing: '0.16px',
-                  mb: 1,
-                }}
-              >
-                No item selected
-              </Typography>
+              <NoItemSelected />
             )}
 
             {/* Selected Items Section */}
