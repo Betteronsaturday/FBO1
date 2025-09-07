@@ -281,19 +281,15 @@ const FilterChip = ({
                       role="button"
                       label={option.label}
                       size="small"
-                      variant="outlined"
-                      color="info"
                       onDelete={() => handleRemoveSelected(option.id)}
                       deleteIcon={
                         <CloseIcon sx={{ fontSize: '16px', color: 'rgba(23,26,28,0.26)' }} />
                       }
                       sx={{
                         height: '24px',
-                        backgroundColor: 'transparent',
-                        borderRadius: '100px',
-                        border: '1px solid',
-                        borderColor: 'rgba(33,150,243,0.12)',
+                        backgroundColor: 'rgba(235,235,235,1)',
                         padding: '3px 4px',
+                        borderRadius: '100px',
                         '& .MuiChip-label': {
                           fontSize: '13px',
                           lineHeight: '18px',
