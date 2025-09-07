@@ -37,14 +37,13 @@ const NoItemSelected = () => {
         >
           <Typography
             sx={{
-              color: '#5F5F5F',
-              fontFamily: 'Roboto, -apple-system, Roboto, Helvetica, sans-serif',
+              color: 'rgba(158,158,158,1)',
               fontSize: '13px',
-              fontStyle: 'normal',
               fontWeight: 400,
-              lineHeight: '18px',
               letterSpacing: '0.16px',
+              lineHeight: '18px',
               position: 'relative',
+              textDecoration: 'rgb(95, 95, 95)',
             }}
           >
             No item selected
