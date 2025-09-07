@@ -292,7 +292,7 @@ const FilterChip = ({
                       letterSpacing: '0.16px',
                       cursor: 'pointer',
                       '&:hover': {
-                        textDecoration: 'underline',
+                        textDecoration: 'none',
                       },
                     }}
                   >
