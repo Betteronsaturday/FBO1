@@ -214,17 +214,22 @@ const FilterChip = ({
                   border: '1px solid rgb(221, 231, 238)',
                   backgroundColor: 'rgba(255,255,255,1)',
                   transitionDuration: '0.2s',
-                  transitionProperty: 'background-color',
+                  transitionProperty: 'background-color, border-color',
                   transitionTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
                 },
+                // Hover: full border #9FA6AD
                 '&:hover .MuiFilledInput-root': {
-                  backgroundColor: 'rgba(255,255,255,1)'
+                  backgroundColor: 'rgba(255,255,255,1)',
+                  border: '1px solid #9FA6AD',
                 },
+                // Focus: full border #2196F3
                 '& .MuiFilledInput-root.Mui-focused': {
-                  backgroundColor: 'rgba(255,255,255,1)'
+                  backgroundColor: 'rgba(255,255,255,1)',
+                  border: '1px solid #2196F3',
+                  boxShadow: '0 0 0 2px rgba(33,150,243,0.08)',
                 },
                 '& .MuiFilledInput-root.Mui-focused:hover': {
-                  backgroundColor: 'rgba(255,255,255,1)'
+                  border: '1px solid #2196F3',
                 },
                 '& .MuiInputLabel-root': {
                   fontSize: '14px',
