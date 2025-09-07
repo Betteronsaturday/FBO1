@@ -63,7 +63,7 @@ function App() {
       <Container maxWidth="md" sx={{ py: 4 }}>
         <Box sx={{ mb: 4 }}>
           <Typography variant="h4" component="h1" gutterBottom>
-            MUI 6 Filter Chip Component
+            Custom filter-chip for FBO One
           </Typography>
           <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
             A responsive filter chip component with dropdown menu, search functionality, and multi-select capabilities.
