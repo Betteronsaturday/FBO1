@@ -19,12 +19,14 @@ import {
   Clear as ClearIcon,
 } from '@mui/icons-material';
 
-const FilterChip = ({ 
-  label = 'Filter default', 
-  badgeCount = 0, 
-  options = [], 
+const CloseFilled = (props) => <CloseIcon {...props} />;
+
+const FilterChip = ({
+  label = 'Filter default',
+  badgeCount = 0,
+  options = [],
   onSelectionChange,
-  onClose 
+  onClose
 }) => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [searchValue, setSearchValue] = useState('');
@@ -103,13 +105,7 @@ const FilterChip = ({
             >
               {label}
             </Typography>
-            <InfoIcon 
-              sx={{ 
-                fontSize: '24px', 
-                color: 'text.secondary',
-                ml: 0.25,
-              }} 
-            />
+            <CloseFilled sx={{ fontSize: 24, color: 'rgb(95,95,95)', ml: '2px' }} />
           </Box>
         }
         onClick={handleChipClick}
