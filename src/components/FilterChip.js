@@ -212,7 +212,7 @@ const FilterChip = ({
                 '& .MuiFilledInput-root': {
                   borderRadius: '4px',
                   border: '1px solid rgb(221, 231, 238)',
-                  backgroundColor: 'rgba(0,0,0,0.06)',
+                  backgroundColor: 'rgba(255,255,255,1)',
                   transitionDuration: '0.2s',
                   transitionProperty: 'background-color',
                   transitionTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
