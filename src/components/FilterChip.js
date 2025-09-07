@@ -15,7 +15,6 @@ import {
   InputAdornment,
 } from '@mui/material';
 import {
-  InfoOutlined as InfoIcon,
   Close as CloseIcon,
   Clear as ClearIcon,
 } from '@mui/icons-material';
