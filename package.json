@@ -1,0 +1,9 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node -e \"console.log('Dev server placeholder: running npm start'); setInterval(()=>{}, 1<<30)\"",
+    "install": "echo 'noop'"
+  }
+}
