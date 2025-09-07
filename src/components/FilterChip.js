@@ -220,7 +220,7 @@ const FilterChip = ({
                 '& .MuiInputLabel-root': {
                   fontSize: '14px',
                   color: 'rgba(158,158,158,1)',
-                  mt: '4px',
+                  mt: '3px',
                 },
                 '& .MuiInputBase-input': {
                   fontSize: '16px',
