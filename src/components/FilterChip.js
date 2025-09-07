@@ -36,6 +36,7 @@ const FilterChip = ({
     options.filter(option => option.checked)
   );
   const chipRef = useRef(null);
+  const [resetTriggered, setResetTriggered] = useState(false);
 
   const isOpen = Boolean(anchorEl);
   const selectedCount = selectedOptions.length;
@@ -47,18 +48,20 @@ const FilterChip = ({
   const handleClose = () => {
     setAnchorEl(null);
     setSearchValue('');
+    setResetTriggered(false);
   };
 
   const handleOptionToggle = (option) => {
+    setResetTriggered(false);
     const isSelected = selectedOptions.find(selected => selected.id === option.id);
     let newSelectedOptions;
-    
+
     if (isSelected) {
       newSelectedOptions = selectedOptions.filter(selected => selected.id !== option.id);
     } else {
       newSelectedOptions = [...selectedOptions, option];
     }
-    
+
     setSelectedOptions(newSelectedOptions);
     onSelectionChange?.(newSelectedOptions);
   };
@@ -72,10 +75,12 @@ const FilterChip = ({
   const handleReset = () => {
     setSelectedOptions([]);
     onSelectionChange?.([]);
+    setResetTriggered(true);
   };
 
   const handleSearchChange = (event) => {
     setSearchValue(event.target.value);
+    setResetTriggered(false);
   };
 
   const clearSearch = () => {
@@ -256,8 +261,21 @@ const FilterChip = ({
             />
 
             {/* No Results */}
-            {hasNoResults && (
+            {resetTriggered && selectedCount === 0 ? (
               <NoItemSelected />
+            ) : hasNoResults && (
+              <Typography
+                variant="body2"
+                sx={{
+                  color: 'text.secondary',
+                  fontSize: '13px',
+                  lineHeight: '18px',
+                  letterSpacing: '0.16px',
+                  mb: 1,
+                }}
+              >
+                No item selected
+              </Typography>
             )}
 
             {/* Selected Items Section */}
