@@ -24,7 +24,7 @@ import NoItemSelected from './NoItemSelected';
 const CloseFilled = (props) => <CloseIcon {...props} />;
 
 const FilterChip = ({
-  label = 'Filter default',
+  label = 'Parking slot',
   badgeCount = 0,
   options = [],
   onSelectionChange,
