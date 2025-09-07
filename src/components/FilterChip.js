@@ -172,7 +172,6 @@ const FilterChip = ({
           vertical: 'top',
           horizontal: 'left',
         }}
-        ModalProps={{ hideBackdrop: true, disableEnforceFocus: true, disableAutoFocus: true }}
         PaperProps={{ sx: { marginTop: '4px', width: '420px', maxWidth: '90vw' } }}
       >
         <Paper
