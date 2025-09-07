@@ -1,6 +1,6 @@
 # Vibe coding on FBO One
 
-##Episode 1: Filter chip##
+_Episode 1: Filter chip_
 
 **Creating and testing different new FBO One components**
 
