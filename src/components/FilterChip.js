@@ -230,7 +230,6 @@ const FilterChip = ({
                 '& .MuiFilledInput-root.Mui-focused': {
                   backgroundColor: 'rgba(255,255,255,1)',
                   border: '1px solid #2196F3',
-                  boxShadow: '0 0 0 2px rgba(33,150,243,0.08)',
                 },
                 '& .MuiFilledInput-root.Mui-focused:hover': {
                   border: '1px solid #2196F3',
