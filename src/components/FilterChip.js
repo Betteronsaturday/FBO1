@@ -92,7 +92,7 @@ const FilterChip = ({
       <Chip
         ref={chipRef}
         label={
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.25 }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.25, width: '100%', minWidth: 0 }}>
             <Typography
               variant="body2"
               sx={{
@@ -102,11 +102,19 @@ const FilterChip = ({
                 letterSpacing: 0,
                 color: 'text.primary',
                 px: 0.5,
+                overflow: 'hidden',
+                textOverflow: 'ellipsis',
+                whiteSpace: 'nowrap',
+                flex: '0 1 auto',
+                minWidth: 0,
               }}
             >
               {label}
             </Typography>
-            <InfoIcon sx={{ fontSize: 24, color: 'rgb(95,95,95)', ml: '2px' }} />
+            <InfoIcon sx={{ fontSize: 24, color: 'rgb(95,95,95)', ml: '8px' }} />
+            <Box sx={{ ml: 'auto', display: 'flex', alignItems: 'center' }}>
+              <CloseFilled sx={{ fontSize: 24, color: 'rgb(95,95,95)' }} />
+            </Box>
           </Box>
         }
         onClick={handleChipClick}
