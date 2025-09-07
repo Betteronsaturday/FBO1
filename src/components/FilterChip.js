@@ -313,7 +313,7 @@ const FilterChip = ({
             )}
 
             {/* Divider */}
-            <Divider sx={{ mb: 1, mt: 1 }} />
+            <Divider sx={{ margin: '16px 0', mb: 1, mt: 1 }} />
 
             {/* Options List */}
             <MenuList sx={{ py: 0, maxHeight: '300px', overflow: 'auto' }}>
