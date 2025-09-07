@@ -105,7 +105,12 @@ const FilterChip = ({
             >
               {label}
             </Typography>
-            <CloseFilled sx={{ fontSize: 24, color: 'rgb(95,95,95)', ml: '2px' }} />
+            <svg focusable="false" aria-hidden="true" viewBox="0 0 24 24" style={{display: 'block', color: 'rgb(95,95,95)', fill: 'rgb(95,95,95)', fontSize: 24, fontWeight: 400, height: 24, lineHeight: '36px', marginLeft: '2px', overflowClipMargin: 'content-box', overflowX: 'hidden', overflowY: 'hidden', textDecoration: 'rgb(95,95,95)', whiteSpace: 'nowrap', transitionDuration: '0.2s', transitionProperty: 'fill', transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)', userSelect: 'none', width: 24 }}>
+              <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" style={{display: 'inline', fill: 'rgb(95,95,95)', fontWeight: 400, whiteSpace: 'nowrap', transformOrigin: '0px 0px', userSelect: 'none'}} />
+            </svg>
+            <svg focusable="false" aria-hidden="true" viewBox="0 0 24 24" style={{display: 'block', color: 'rgb(95,95,95)', fill: 'rgb(95,95,95)', fontSize: 24, fontWeight: 400, height: 24, lineHeight: '36px', marginLeft: '2px', overflowClipMargin: 'content-box', overflowX: 'hidden', overflowY: 'hidden', textDecoration: 'rgb(95,95,95)', whiteSpace: 'nowrap', transitionDuration: '0.2s', transitionProperty: 'fill', transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)', userSelect: 'none', width: 24 }}>
+              <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" style={{display: 'inline', fill: 'rgb(95,95,95)', fontWeight: 400, whiteSpace: 'nowrap', transformOrigin: '0px 0px', userSelect: 'none'}} />
+            </svg>
           </Box>
         }
         onClick={handleChipClick}
