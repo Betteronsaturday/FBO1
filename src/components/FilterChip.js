@@ -19,11 +19,12 @@ import {
   Close as CloseIcon,
   Clear as ClearIcon,
 } from '@mui/icons-material';
+import NoItemSelected from './NoItemSelected';
 
 const CloseFilled = (props) => <CloseIcon {...props} />;
 
 const FilterChip = ({
-  label = 'Filter default',
+  label = 'Parking slot',
   badgeCount = 0,
   options = [],
   onSelectionChange,
@@ -35,6 +36,7 @@ const FilterChip = ({
     options.filter(option => option.checked)
   );
   const chipRef = useRef(null);
+  const [resetTriggered, setResetTriggered] = useState(false);
 
   const isOpen = Boolean(anchorEl);
   const selectedCount = selectedOptions.length;
@@ -46,18 +48,20 @@ const FilterChip = ({
   const handleClose = () => {
     setAnchorEl(null);
     setSearchValue('');
+    setResetTriggered(false);
   };
 
   const handleOptionToggle = (option) => {
+    setResetTriggered(false);
     const isSelected = selectedOptions.find(selected => selected.id === option.id);
     let newSelectedOptions;
-    
+
     if (isSelected) {
       newSelectedOptions = selectedOptions.filter(selected => selected.id !== option.id);
     } else {
       newSelectedOptions = [...selectedOptions, option];
     }
-    
+
     setSelectedOptions(newSelectedOptions);
     onSelectionChange?.(newSelectedOptions);
   };
@@ -71,10 +75,12 @@ const FilterChip = ({
   const handleReset = () => {
     setSelectedOptions([]);
     onSelectionChange?.([]);
+    setResetTriggered(true);
   };
 
   const handleSearchChange = (event) => {
     setSearchValue(event.target.value);
+    setResetTriggered(false);
   };
 
   const clearSearch = () => {
@@ -112,6 +118,29 @@ const FilterChip = ({
               {label}
             </Typography>
             <InfoIcon sx={{ fontSize: 24, color: 'rgb(95,95,95)', ml: '8px' }} />
+
+            {selectedCount > 0 && (
+              <Box
+                sx={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  bgcolor: 'primary.main',
+                  color: 'primary.contrastText',
+                  fontSize: '12px',
+                  fontWeight: 500,
+                  lineHeight: '20px',
+                  minWidth: '20px',
+                  height: '20px',
+                  borderRadius: '100px',
+                  px: '6.5px',
+                }}
+                aria-hidden
+              >
+                {selectedCount}
+              </Box>
+            )}
+
             <Box sx={{ ml: 'auto', display: 'flex', alignItems: 'center' }}>
               <CloseFilled sx={{ fontSize: 24, color: 'rgb(95,95,95)' }} />
             </Box>
@@ -148,7 +177,7 @@ const FilterChip = ({
           height: '32px',
           borderRadius: '100px',
           border: '1px solid',
-          borderColor: 'grey.300',
+          borderColor: isOpen ? 'primary.main' : 'grey.300',
           backgroundColor: 'grey.100',
           '& .MuiChip-label': {
             padding: '4px 4px',
@@ -255,7 +284,9 @@ const FilterChip = ({
             />
 
             {/* No Results */}
-            {hasNoResults && (
+            {resetTriggered && selectedCount === 0 ? (
+              <NoItemSelected />
+            ) : hasNoResults && (
               <Typography
                 variant="body2"
                 sx={{
