@@ -1,4 +1,4 @@
 # FBO One Components
 
-**Custom filter-chip for FBO One**
-A responsive filter chip component with dropdown menu, search functionality, and multi-select capabilities.
+**Creating and testing different FBO One new components**
+- Filter chip
