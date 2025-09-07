@@ -136,13 +136,7 @@ const FilterChip = ({
                 }}
               />
             )}
-            <CloseIcon 
-              sx={{ 
-                fontSize: '24px', 
-                opacity: 0.26,
-                ml: 0.5,
-              }} 
-            />
+            <CloseIcon sx={{ fontSize: '24px', color: 'rgba(23,26,28,0.26)', ml: 0.5 }} />
           </Box>
         }
         variant="outlined"
@@ -289,15 +283,18 @@ const FilterChip = ({
                   {selectedOptions.map((option) => (
                     <Chip
                       key={option.id}
+                      tabIndex={0}
+                      role="button"
                       label={option.label}
                       size="small"
                       onDelete={() => handleRemoveSelected(option.id)}
                       deleteIcon={
-                        <CloseIcon sx={{ fontSize: '16px', opacity: 0.26 }} />
+                        <CloseIcon sx={{ fontSize: '16px', color: 'rgba(23,26,28,0.26)' }} />
                       }
                       sx={{
                         height: '24px',
-                        backgroundColor: 'action.selected',
+                        backgroundColor: 'rgba(235,235,235,1)',
+                        padding: '3px 4px',
                         borderRadius: '100px',
                         '& .MuiChip-label': {
                           fontSize: '13px',
