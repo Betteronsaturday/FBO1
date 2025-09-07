@@ -218,7 +218,7 @@ const FilterChip = ({
                 },
                 '& .MuiInputLabel-root': {
                   fontSize: '12px',
-                  color: 'text.secondary',
+                  color: 'rgba(95,95,95,1)',
                 },
                 '& .MuiInputBase-input': {
                   fontSize: '16px',
