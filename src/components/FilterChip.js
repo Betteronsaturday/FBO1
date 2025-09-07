@@ -316,7 +316,7 @@ const FilterChip = ({
             <Divider sx={{ margin: '16px 0', mb: 1, mt: 1 }} />
 
             {/* Options List */}
-            <MenuList sx={{ py: 0, maxHeight: '300px', overflow: 'auto' }}>
+            <MenuList sx={{ py: 0, maxHeight: '300px', overflow: 'auto', marginTop: '16px' }}>
               {filteredOptions.map((option) => {
                 const isSelected = selectedOptions.find(selected => selected.id === option.id);
                 return (
