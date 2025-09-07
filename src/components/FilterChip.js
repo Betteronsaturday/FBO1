@@ -177,7 +177,7 @@ const FilterChip = ({
           height: '32px',
           borderRadius: '100px',
           border: '1px solid',
-          borderColor: 'grey.300',
+          borderColor: isOpen ? 'primary.main' : 'grey.300',
           backgroundColor: 'grey.100',
           '& .MuiChip-label': {
             padding: '4px 4px',
