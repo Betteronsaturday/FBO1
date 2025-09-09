@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import {
   Box,
   Chip,
@@ -37,6 +37,11 @@ const FilterChip = ({
   );
   const chipRef = useRef(null);
   const [resetTriggered, setResetTriggered] = useState(false);
+  const [badgeCountState, setBadgeCountState] = useState(badgeCount);
+
+  useEffect(() => {
+    setBadgeCountState(badgeCount);
+  }, [badgeCount]);
 
   const isOpen = Boolean(anchorEl);
   const selectedCount = selectedOptions.length;
@@ -76,6 +81,7 @@ const FilterChip = ({
     setSelectedOptions([]);
     onSelectionChange?.([]);
     setResetTriggered(true);
+    setBadgeCountState(0);
   };
 
   const handleSearchChange = (event) => {
@@ -150,9 +156,9 @@ const FilterChip = ({
         onDelete={onClose}
         deleteIcon={
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.25 }}>
-            {badgeCount > 0 && (
+            {badgeCountState > 0 && (
               <Badge
-                badgeContent={badgeCount}
+                badgeContent={badgeCountState}
                 sx={{
                   '& .MuiBadge-badge': {
                     backgroundColor: 'primary.main',
