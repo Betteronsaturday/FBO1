@@ -222,66 +222,68 @@ const FilterChip = ({
             },
           }}
         >
-          <Box sx={{ p: 2 }}>
+          <Box sx={{ py: 2, px: 0 }}>
             {/* Search Field */}
-            <TextField
-              fullWidth
-              size="small"
-              label="Search value"
-              value={searchValue}
-              onChange={handleSearchChange}
-              variant="filled"
-              InputProps={{
-                endAdornment: searchValue && (
-                  <InputAdornment position="end">
-                    <IconButton
-                      size="small"
-                      onClick={clearSearch}
-                      edge="end"
-                    >
-                      <ClearIcon sx={{ fontSize: '24px', opacity: 0.56 }} />
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              }}
-              sx={{
-                mb: 2,
-                '& .MuiFilledInput-root': {
-                  borderRadius: '4px',
-                  border: '1px solid rgb(221, 231, 238)',
-                  backgroundColor: 'rgba(255,255,255,1)',
-                  transitionDuration: '0.2s',
-                  transitionProperty: 'background-color, border-color',
-                  transitionTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
-                },
-                // Hover: full border #9FA6AD
-                '&:hover .MuiFilledInput-root': {
-                  backgroundColor: 'rgba(255,255,255,1)',
-                  border: '1px solid #9FA6AD',
-                },
-                // Focus: full border #2196F3
-                '& .MuiFilledInput-root.Mui-focused': {
-                  backgroundColor: 'rgba(255,255,255,1)',
-                  border: '1px solid #2196F3',
-                },
-                '& .MuiFilledInput-root.Mui-focused:hover': {
-                  border: '1px solid #2196F3',
-                },
-                '& .MuiInputLabel-root': {
-                  fontSize: '14px',
-                  color: 'rgba(158,158,158,1)',
-                  mt: '3px',
-                  textDecoration: 'none',
-                },
-                '& .MuiInputBase-input': {
-                  fontSize: '16px',
-                  lineHeight: '24px',
-                  letterSpacing: '0.15px',
-                  height: '23px',
-                  padding: '21px 12px 4px',
-                },
-              }}
-            />
+            <Box sx={{ display: 'flex', flexDirection: 'column', px: 2 }}>
+              <TextField
+                fullWidth
+                size="small"
+                label="Search value"
+                value={searchValue}
+                onChange={handleSearchChange}
+                variant="filled"
+                InputProps={{
+                  endAdornment: searchValue && (
+                    <InputAdornment position="end">
+                      <IconButton
+                        size="small"
+                        onClick={clearSearch}
+                        edge="end"
+                      >
+                        <ClearIcon sx={{ fontSize: '24px', opacity: 0.56 }} />
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                }}
+                sx={{
+                  mb: 2,
+                  '& .MuiFilledInput-root': {
+                    borderRadius: '4px',
+                    border: '1px solid rgb(221, 231, 238)',
+                    backgroundColor: 'rgba(255,255,255,1)',
+                    transitionDuration: '0.2s',
+                    transitionProperty: 'background-color, border-color',
+                    transitionTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)',
+                  },
+                  // Hover: full border #9FA6AD
+                  '&:hover .MuiFilledInput-root': {
+                    backgroundColor: 'rgba(255,255,255,1)',
+                    border: '1px solid #9FA6AD',
+                  },
+                  // Focus: full border #2196F3
+                  '& .MuiFilledInput-root.Mui-focused': {
+                    backgroundColor: 'rgba(255,255,255,1)',
+                    border: '1px solid #2196F3',
+                  },
+                  '& .MuiFilledInput-root.Mui-focused:hover': {
+                    border: '1px solid #2196F3',
+                  },
+                  '& .MuiInputLabel-root': {
+                    fontSize: '14px',
+                    color: 'rgba(158,158,158,1)',
+                    mt: '3px',
+                    textDecoration: 'none',
+                  },
+                  '& .MuiInputBase-input': {
+                    fontSize: '16px',
+                    lineHeight: '24px',
+                    letterSpacing: '0.15px',
+                    height: '23px',
+                    padding: '21px 12px 4px',
+                  },
+                }}
+              />
+            </Box>
 
             {/* No Results */}
             {resetTriggered && selectedCount === 0 ? (
@@ -304,74 +306,80 @@ const FilterChip = ({
             {/* Selected Items Section */}
             {selectedCount > 0 && (
               <>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
-                  <Typography
-                    variant="body2"
-                    sx={{
-                      color: 'text.secondary',
-                      fontSize: '13px',
-                      lineHeight: '18px',
-                      letterSpacing: '0.16px',
-                    }}
-                  >
-                    Selected items
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    onClick={handleReset}
-                    sx={{
-                      color: 'primary.main',
-                      fontSize: '13px',
-                      lineHeight: '18px',
-                      letterSpacing: '0.16px',
-                      cursor: 'pointer',
-                      '&:hover': {
-                        textDecoration: 'none',
-                      },
-                    }}
-                  >
-                    Reset
-                  </Typography>
+                <Box sx={{ display: 'flex', flexDirection: 'column', px: 2 }}>
+                  <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        color: 'text.secondary',
+                        fontSize: '13px',
+                        lineHeight: '18px',
+                        letterSpacing: '0.16px',
+                      }}
+                    >
+                      Selected items
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      onClick={handleReset}
+                      sx={{
+                        color: 'primary.main',
+                        fontSize: '13px',
+                        lineHeight: '18px',
+                        letterSpacing: '0.16px',
+                        cursor: 'pointer',
+                        '&:hover': {
+                          textDecoration: 'none',
+                        },
+                      }}
+                    >
+                      Reset
+                    </Typography>
+                  </Box>
                 </Box>
 
                 {/* Selected Items Chips */}
-                <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', marginBottom: '16px' }}>
-                  {selectedOptions.map((option) => (
-                    <Chip
-                      key={option.id}
-                      tabIndex={0}
-                      role="button"
-                      label={option.label}
-                      size="small"
-                      onDelete={() => handleRemoveSelected(option.id)}
-                      deleteIcon={
-                        <CloseIcon sx={{ fontSize: '16px', color: 'rgba(23,26,28,0.26)' }} />
-                      }
-                      sx={{
-                        height: '24px',
-                        backgroundColor: 'rgba(235,235,235,1)',
-                        padding: '3px 4px',
-                        borderRadius: '100px',
-                        '& .MuiChip-label': {
-                          fontSize: '13px',
-                          lineHeight: '18px',
-                          letterSpacing: '0.16px',
-                          color: 'rgba(0,0,0,0.87)',
-                          padding: '0 6px',
-                        },
-                        '& .MuiChip-deleteIcon': {
-                          fontSize: '16px',
-                          margin: 0,
-                        },
-                      }}
-                    />
-                  ))}
+                <Box sx={{ display: 'flex', flexDirection: 'column', px: 2 }}>
+                  <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', marginBottom: '16px' }}>
+                    {selectedOptions.map((option) => (
+                      <Chip
+                        key={option.id}
+                        tabIndex={0}
+                        role="button"
+                        label={option.label}
+                        size="small"
+                        onDelete={() => handleRemoveSelected(option.id)}
+                        deleteIcon={
+                          <CloseIcon sx={{ fontSize: '16px', color: 'rgba(23,26,28,0.26)' }} />
+                        }
+                        sx={{
+                          height: '24px',
+                          backgroundColor: 'rgba(235,235,235,1)',
+                          padding: '3px 4px',
+                          borderRadius: '100px',
+                          '& .MuiChip-label': {
+                            fontSize: '13px',
+                            lineHeight: '18px',
+                            letterSpacing: '0.16px',
+                            color: 'rgba(0,0,0,0.87)',
+                            padding: '0 6px',
+                          },
+                          '& .MuiChip-deleteIcon': {
+                            fontSize: '16px',
+                            margin: 0,
+                          },
+                        }}
+                      />
+                    ))}
+                  </Box>
                 </Box>
               </>
             )}
 
             {/* Divider */}
-            <Divider sx={{ margin: '16px 0', mb: 1, mt: 1, marginBottom: '8px' }} />
+            <Box sx={{ display: 'flex', flexDirection: 'column', px: 2 }}>
+              <Divider sx={{ margin: '16px 0', mb: 1, mt: 1, marginBottom: '8px' }} />
+            </Box>
 
             {/* Options List */}
             <MenuList sx={{ py: 0, maxHeight: '300px', overflow: 'auto', marginTop: '16px' }}>
