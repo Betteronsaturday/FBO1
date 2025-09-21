@@ -20,6 +20,7 @@ In this first episode, I'm going to think and develop a custom _filter-chip_ for
 
 &nbsp;
 
+If you don't want to do all the Dev stuff, I prepared the table for you:
 [Preview here](https://4f7044d2448a418baf71d1e9af803ee1-vortex-zone.projects.builder.my) <br/>
 
 &nbsp;
